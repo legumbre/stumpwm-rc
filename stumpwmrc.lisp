@@ -48,7 +48,7 @@
 
 (defcommand conkeror () ()
   "Run or switch to Conkeror"
-  (run-or-raise "/opt/local/bin/firefox-x11-devel-standalone  --app ~/conkeror/application.ini -repl" '(:role "browser")))
+  (run-or-raise "/opt/local/bin/firefox-x11-devel --app ~/conkeror/application.ini -repl" '(:role "browser")))
 (define-key *root-map* (kbd "f") "conkeror")
 
 (defcommand conkeror-unfocus () ()
@@ -72,7 +72,7 @@
 
 (defcommand hades () ()
   "Run or switch to root@hades."
-  (run-or-raise "/opt/local/bin/urxvt -title hades -n hades -e ssh -i ~/.keys/leo.pem -C root@10.10.10.1" '(:title "hades")))
+  (run-or-raise "/opt/local/bin/urxvt -title hades -n hades -e ssh -v -i ~/.keys/leo.pem -C root@10.10.10.1" '(:title "hades")))
 (define-key *root-map* (kbd "q") "hades")
 
 (defcommand vnc-minileo () ()
